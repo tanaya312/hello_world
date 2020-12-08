@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css"
+        integrity="sha384-VCmXjywReHh4PwowAiWNagnWcLhlEJLA5buUprzK8rxFgeH0kww/aWY76TfkUoSX" crossorigin="anonymous">
+
+    <title> PLANT DISEASE PREDICTION</title>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .bg {
+         background-image: url("https://i.pinimg.com/originals/fa/92/47/fa92471b04aa2f0b27bf682368cea756.jpg");
+         height: 100%; 
+         background-position: center;
+         background-repeat: no-repeat;
+         background-size: 100% 100%;
+         }
+         button:hover {
+            background-color: #ddd;
+            color: black;
+            }
+         button {
+             text-decoration: none;
+             display: inline-block;
+             padding: 8px 16px;
+            }
+
+         .previous{
+          background-color: #4CAF50;
+          color: white;
+         } 
+
+
+
+        .card-style {
+            background-color: #dcdcdca4;
+
+        }
+
+        .content {
+            padding: 15px;
+            color: white;
+            background-color: rgb(150, 156, 150);
+            /* font-size: 1rem; */
+        }
+
+        @media (max-width: 430px) and (min-width: 200px) {
+
+
+            .contents {
+                font-size: 0.6rem;
+                color: chartreuse;
+            }
+
+            .content-h1 {
+
+                font-size: 1rem;
+            }
+        }
+
+        .border img {
+            border-radius: 15px;
+            border: 2px solid black;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+    <div class="bg">
+
+
+    <div>
+        <img src="/static/images/cotton palnt banner.png" class="w3-border w3-padding" alt="plant disease detector"
+            style="width:100% ">
+    </div>
+ <button class="previous" onclick="goBack()">&laquo; Back</button>
+         <script>
+          function goBack() {
+          window.history.back();
+          }
+        </script> 
+
+    <div class="container my-2">
+        <div class="row mb-5">
+
+            <div class="col-sm" style="margin-bottom: 23px;">
+                <span class="border border-primary">
+                    <img src="{{ user_image }}" alt="User Image" class="img-thumbnail">
+                    
+
+                </span>
+            </div>
+
+            <div class="col-sm">
+
+                <div>
+                    <h1 style="padding: 15px; background-color: rgb(153, 156, 150); color: white;"
+                        class="text-center mb-5 content-h1 rounded">
+                        {{pred_output}} </h1>
+                </div>
+                <div class="details">
+                    <h2 style="color:white;">Disease Name  : </span></h2>
+                    <h3 style="color: blanchedalmond;""line-height: 100%;">Foliar disease on the plant leaf . <br> </h3>
+                    <hr class="w-100 mx-auto ">
+                </div>
+            </div>
+
+            <h2 style="color: aliceblue;"> Causes of Disease: </h2>
+
+            <p style="color: blanchedalmond;"><strong>In many cases the complex 
+                 of foliar disease causing organisms (Alternaria, Cercospora,
+                 Stemphyllium, etc.) that cause these diseases are typically
+                  linked to potassium deficiency in cotton leaves, but are
+                   not generally related to a soil deficiency</strong></p>
+    
+    
+            <h2 style="color: aliceblue;"> Solution for Disease: </h2>
+            <p style="color: blanchedalmond;"><strong>The best way to treat
+                 suspected bacterial infections is to cut out all infected plant
+                  parts in order to prevent further spread. You can also use a
+                   bactericide in the early stages of the disease.</strong></p>
+                </div>
+            </div>
+
+            <section>
+
+                <div class="container">
+                    <h1 style="padding: 15px; background-color: rgb(153, 156, 150); color: white;"
+                        class="text-center my-3 content-h1">
+                        Recommended Products</h1>
+                </div>
+        
+                <div class="container">
+        
+        
+                    <div class="card-columns">
+                        <div class="card ">
+                            <div class="card-body text-center card-style">
+                                <img style="border-radius: 10px;" class="img-fluid" src="/static/images/preet.png" alt="">
+                                <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
+                            </div>
+                        </div>
+                        <div class="card ">
+                            <div class="card-body text-center card-style">
+                                <img style="border-radius: 10px" class="img-fluid" src="/static/images/victor.png" alt="">
+                                <h3 class="card-text">Dose: 60-80 gm/Acre</h3>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="card-body text-center card-style">
+                                <img style="border-radius: 10px;" class="img-fluid" src="/static/images/ulala.png" alt="">
+                                <h3 class="card-text">Dose: 25-40 gm/Acre</h3>
+                            </div>
+                        </div>
+                        
+                      
+        
+        
+                    </div>
+        
+                </div>
+        
+            </section>
+        </div>
+
+
+    </div>
+    </div>
+</body>
+
+</html>
